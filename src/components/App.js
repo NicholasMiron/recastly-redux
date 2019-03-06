@@ -14,11 +14,10 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
-      videos: [],
-      currentVideo: null
+      videos: exampleVideoData,
+      currentVideo: exampleVideoData[0]
     };
   }
-
   componentDidMount() {
     this.getYouTubeVideos('react tutorials');
   }
@@ -48,7 +47,7 @@ export default class App extends React.Component {
       <div>
         <nav className="navbar">
           <div className="col-md-6 col-md-offset-3">
-            <Search handleSearchInputChange={handleSearchInputChange}/>
+             {/* <Search handleSearchInputChange={handleSearchInputChange}/> */}
           </div>
         </nav>
         <div className="row">
