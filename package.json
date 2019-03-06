@@ -6,7 +6,7 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "test": "live-server --open=./SpecRunner.html --port=8081",
+    "test": "live-server  --open=./SpecRunner.html --port=8081",
     "start": "live-server",
     "build": "webpack -d --watch"
   },
