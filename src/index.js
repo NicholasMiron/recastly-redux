@@ -16,10 +16,9 @@ import configureStore from './store/store.js';
 // }
 
 const store = configureStore;
-console.log('the village people', store);
 
 ReactDOM.render(
-  <Provider story={store}>
+  <Provider store={store}>
     <App API_KEY={YOUTUBE_API_KEY} searchYouTube={searchYouTube}/>
   </Provider>,
   document.getElementById('app')
