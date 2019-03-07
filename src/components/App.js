@@ -19,7 +19,7 @@ export default class App extends React.Component {
     };
   }
   componentDidMount() {
-    this.getYouTubeVideos('react tutorials');
+    this.getYouTubeVideos('kittens');
   }
 
   handleVideoListEntryTitleClick(video) {
@@ -33,6 +33,7 @@ export default class App extends React.Component {
     };
 
     this.props.searchYouTube(options, (videos) =>
+
       this.setState({
         videos: videos,
         currentVideo: videos[0]
@@ -47,18 +48,21 @@ export default class App extends React.Component {
       <div>
         <nav className="navbar">
           <div className="col-md-6 col-md-offset-3">
+          <SearchContainer />
              {/* <Search handleSearchInputChange={handleSearchInputChange}/> */}
           </div>
         </nav>
         <div className="row">
           <div className="col-md-7">
-            <VideoPlayer video={this.state.currentVideo}/>
+          <VideoPlayerContainer />
+            {/* <VideoPlayer video={this.state.currentVideo}/> */}
           </div>
           <div className="col-md-5">
-            <VideoList
+            <VideoListContainer />
+            {/* <VideoList
               handleVideoListEntryTitleClick={this.handleVideoListEntryTitleClick.bind(this)}
               videos={this.state.videos}
-            />
+            /> */}
           </div>
         </div>
       </div>
