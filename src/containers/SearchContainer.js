@@ -6,10 +6,15 @@ import handleVideoSearch from '../actions/search.js';
 const mapDispatchToProps = dispatch => {
     return {
         handleSearchInputChange: (e) => {
-            dispatch(handleVideoSearch);
+            
+            dispatch(handleVideoSearch(e));
+        },
+        handleSearchSubmit: (e) => {
+            
         }
     }
 }
+
 
 var SearchContainer = connect(
     null,
